@@ -1,9 +1,6 @@
 package de.harshaheg.learnspringboot;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -23,7 +20,7 @@ public class HelloController {
 		return String.valueOf(i);
 	}
 
-	@PostMapping("/")
+	@DeleteMapping("/")
 	public String post(){
 		int i = counter.decrementAndGet();
 		return String.valueOf(i);
